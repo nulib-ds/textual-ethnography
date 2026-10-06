@@ -1,5 +1,8 @@
 navigation:
   - href: /search
-    label: Works
+    label: Collection
+  - href: /essays
+    label: Essays
   - href: /about
     label: About
+
