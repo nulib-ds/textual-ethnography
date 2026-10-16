@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textual Ethnography network</title>
+
+  <!-- 1. Load the vis-network library -->
+  <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+
+  <style>
+    body { margin: 0; background: #fff; font-family: Georgia, "Times New Roman", serif; }
+    #network { width: 100%; height: 600px; }
+    #message { padding: 1rem; }
+  </style>
+</head>
+<body>
+  <!-- 2. The empty box the network is drawn into -->
+  <div id="network"></div>
+  <p id="message"></p>
+
+  <script>
+    // 3. Settings that control how the network looks
+    const options = {
+      nodes: {
+        size: 28,
+        borderWidth: 2,
+        color: { border: "#000000", background: "#ffffff" },
+        font: { face: "Georgia", size: 14, color: "#000000" }
+      },
+      // Each type (from the "type" column) can get its own look
+      groups: {
+        author:   { size: 32 },
+        essay:    { size: 26 },
+        artifact: { size: 30 },
+        subject:  { size: 22, color: { border: "#777777", background: "#ffffff" } }
+      },
+      edges: {
+        color: "#999999",
+        arrows: { to: { enabled: true, scaleFactor: 0.5 } },
+        smooth: false
+      },
+      physics: { stabilization: { iterations: 200 } },
+      interaction: { hover: true }
+    };
+
+    // 4. Load the data file, then draw the network
+    fetch("network-data.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("network");
+        new vis.Network(container, data, options);
+      })
+      .catch(error => {
+        document.getElementById("message").textContent =
+          "Couldn't load network-data.json. Check that it is in the same folder as this page.";
+        console.error(error);
+      });
+  </script>
+</body>
+</html>

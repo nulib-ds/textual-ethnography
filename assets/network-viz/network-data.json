@@ -1,0 +1,240 @@
+{
+  "nodes": [
+    {
+      "id": "a1",
+      "label": "Jane Smith",
+      "group": "author",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mary_Jane_Smith_%281850-1946%29_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "a2",
+      "label": "Jane Goodall",
+      "group": "author",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jane_Goodall_HK.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "a3",
+      "label": "Boris Karloff",
+      "group": "author",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Boris_Karloff.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "a4",
+      "label": "Willard Gibbs",
+      "group": "author",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Willard_Gibbs.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "a5",
+      "label": "Jane Adams",
+      "group": "author",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jane_Adams.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "e1",
+      "label": "Hands in the Margins",
+      "group": "essay",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "e2",
+      "label": "Book as Witness",
+      "group": "essay",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "e3",
+      "label": "Tales from the Crypt",
+      "group": "essay",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "e4",
+      "label": "Good Geography",
+      "group": "essay",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "e5",
+      "label": "Waning Principles",
+      "group": "essay",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "r1",
+      "label": "Armenian Bible leaf",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_first_Bible_printed_in_the_Armenian_language.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "r2",
+      "label": "Late 16th/early 17th century commonplace book",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flickr_-_Beinecke_Flickr_Laboratory_-_%28Commonplace_Book%29%2C_%28late_17th_Century%29_%2827%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "r3",
+      "label": "Cuneiform Tablets",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Cuneiform_Akkadian_clay_tablet_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "r4",
+      "label": "Aleister Crowley manuscript grimoire",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://iiif.dc.library.northwestern.edu/iiif/3/c748711f-1eba-4d7e-ac9c-91b6e92c072b/full/,3000/0/default.jpg"
+    },
+    {
+      "id": "r5",
+      "label": "Selection of 2nd wave feminist posters",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Welfare_Conference_Poster_%28New_York_Wages_for_Housework_Committee%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "r6",
+      "label": "Selection of 1960s-1980s progressive protest buttons",
+      "group": "artifact",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Yippie%21_Button_at_the_Chicago_History_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s1",
+      "label": "marginalia",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Icon-pencil-9576.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s2",
+      "label": "provenance",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/File_box_Pinhead_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s3",
+      "label": "scribal practice",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Pen_nib_Pinhead_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s4",
+      "label": "reuse",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Noun_Project_Recycle_icon_30123_cc.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s5",
+      "label": "abundance",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Cornucopia_-_Delapouite_-_game-icons.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    },
+    {
+      "id": "s6",
+      "label": "cowardice",
+      "group": "subject",
+      "shape": "circularImage",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Lion_-_Lorc_-_game-icons.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    }
+  ],
+  "edges": [
+    {
+      "from": "a1",
+      "to": "e1",
+      "title": "wrote"
+    },
+    {
+      "from": "a2",
+      "to": "e2",
+      "title": "wrote"
+    },
+    {
+      "from": "a3",
+      "to": "e3",
+      "title": "wrote"
+    },
+    {
+      "from": "a4",
+      "to": "e4",
+      "title": "wrote"
+    },
+    {
+      "from": "a5",
+      "to": "e5",
+      "title": "wrote"
+    },
+    {
+      "from": "e1",
+      "to": "r1",
+      "title": "is about"
+    },
+    {
+      "from": "e2",
+      "to": "r2",
+      "title": "is about"
+    },
+    {
+      "from": "e3",
+      "to": "r3",
+      "title": "is about"
+    },
+    {
+      "from": "e4",
+      "to": "r4",
+      "title": "is about"
+    },
+    {
+      "from": "e5",
+      "to": "r5",
+      "title": "is about"
+    },
+    {
+      "from": "e1",
+      "to": "s1",
+      "title": "discusses"
+    },
+    {
+      "from": "e2",
+      "to": "s1",
+      "title": "discusses"
+    },
+    {
+      "from": "e3",
+      "to": "s2",
+      "title": "discusses"
+    },
+    {
+      "from": "e4",
+      "to": "s3",
+      "title": "discusses"
+    },
+    {
+      "from": "e5",
+      "to": "s4",
+      "title": "discusses"
+    },
+    {
+      "from": "e2",
+      "to": "r2",
+      "title": "is about"
+    }
+  ]
+}
