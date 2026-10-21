@@ -11,3 +11,23 @@
     --color-accent-default: var(--color-northwestern-purple);
   }
 } */
+
+
+/* Animated TEXTHNOGRAPHY wordmark in the site header (see content/_app.mdx) */
+.te-brand { display: flex; flex-direction: column; gap: 0.2rem; line-height: 1; }
+.te-brand__title { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.05em; }
+.te-brand__subtitle { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.02em; color: #555; }
+.te-brand b { font-weight: inherit; }
+.te-brand .text   { animation: textOn   12s infinite; }
+.te-brand .shared { animation: sharedOn 12s infinite; }
+.te-brand .ethno  { animation: ethnoOn  12s infinite; }
+.te-brand .graphy { animation: graphyOn 12s infinite; }
+@keyframes textOn   { 0%, 22% { color: #EC2D01; } 25%, 97% { color: #bbbbbb; } 100% { color: #EC2D01; } }
+@keyframes sharedOn { 0%, 47% { color: #EC2D01; } 50%, 72% { color: #bbbbbb; } 75%, 100% { color: #EC2D01; } }
+@keyframes ethnoOn  { 0%, 22% { color: #bbbbbb; } 25%, 47% { color: #EC2D01; } 50%, 72% { color: #bbbbbb; } 75%, 97% { color: #EC2D01; } 100% { color: #bbbbbb; } }
+@keyframes graphyOn { 0%, 47% { color: #bbbbbb; } 50%, 97% { color: #EC2D01; } 100% { color: #bbbbbb; } }
+@media (prefers-reduced-motion: reduce) { .te-brand b { animation: none !important; color: #EC2D01; } }
+/* Keep the plain-text site title for screen readers, but hide it visually */
+.canopy-logo:has(.te-brand) > span {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}

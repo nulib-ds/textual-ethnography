@@ -33,11 +33,10 @@ export function App({children}) {
 }
 
 export const Logo = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-    <circle className="canopy-logo-backlight" cx="250" cy="250" r="250" />
-    <path
-      className="canopy-logo-overlay"
-      d="M125,33.45C50.28,76.68,0,157.47,0,250s50.28,173.32,125,216.55c74.72-43.23,125-124.01,125-216.55S199.72,76.68,125,33.45Z"
-    />
-  </svg>
+  <div className="te-brand">
+    <div className="te-brand__title" aria-hidden="true">
+      <b className="text">T</b><b className="shared">E</b><b className="text">X</b><b className="shared">T</b><b className="ethno">HNO</b><b className="graphy">GRAPHY</b>
+    </div>
+    <div className="te-brand__subtitle">Explorations in Comparative and Interdisciplinary Research</div>
+  </div>
 );

@@ -10,37 +10,63 @@
 
   <style>
     body { margin: 0; background: #fff; font-family: Georgia, "Times New Roman", serif; }
-    #network { width: 100%; height: 600px; }
-    #message { padding: 1rem; }
+    html, body { height: 100%; overflow: hidden; }
+    #network { position: fixed; inset: 0; }
+    #message { position: fixed; top: 0; left: 0; padding: 1rem; }
+    #popup {
+      position: fixed; top: 50%; right: 3%; transform: translateY(-50%);
+      width: min(340px, 90vw); max-height: 80vh; overflow: auto;
+      background: #fff; border: 2px solid #000; padding: 1.25rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.25); display: none;
+    }
+    #popup.open { display: block; }
+    #popup h2 { margin: 0 0 .25rem; font-size: 1.25rem; }
+    #popup .type { text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; color: #777; margin-bottom: .75rem; }
+    #popup img { width: 100%; max-height: 200px; object-fit: cover; margin-bottom: .75rem; }
+    #popup ul { padding-left: 1.1rem; margin: .25rem 0 0; }
+    #popup h3 { font-size: .9rem; margin: .75rem 0 0; }
+    #popup button { position: absolute; top: .4rem; right: .6rem; border: 0; background: none; font-size: 1.5rem; cursor: pointer; }
   </style>
 </head>
 <body>
   <!-- 2. The empty box the network is drawn into -->
   <div id="network"></div>
   <p id="message"></p>
+  <div id="popup" role="dialog" aria-live="polite"></div>
 
   <script>
     // 3. Settings that control how the network looks
     const options = {
       nodes: {
-        size: 28,
+        size: 60,
         borderWidth: 2,
         color: { border: "#000000", background: "#ffffff" },
-        font: { face: "Georgia", size: 14, color: "#000000" }
+        font: { face: "Georgia", size: 24, color: "#000000" }
       },
       // Each type (from the "type" column) can get its own look
       groups: {
-        author:   { size: 32 },
-        essay:    { size: 26 },
-        artifact: { size: 30 },
-        subject:  { size: 22, color: { border: "#777777", background: "#ffffff" } }
+        author:   { size: 80 },
+        essay:    { size: 80 },
+        artifact: { size: 80 },
+        subject:  { size: 80, color: { border: "#777777", background: "#ffffff" } }
       },
       edges: {
         color: "#999999",
         arrows: { to: { enabled: true, scaleFactor: 0.5 } },
         smooth: false
       },
-      physics: { stabilization: { iterations: 200 } },
+      // Stronger repulsion and longer springs spread the nodes out
+      physics: {
+        solver: "forceAtlas2Based",
+        forceAtlas2Based: {
+          gravitationalConstant: -300,
+          centralGravity: 0.004,
+          springLength: 200,
+          springConstant: 0.04,
+          avoidOverlap: 1
+        },
+        stabilization: { iterations: 400 }
+      },
       interaction: { hover: true }
     };
 
@@ -49,7 +75,79 @@
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById("network");
-        new vis.Network(container, data, options);
+        const nodes = new vis.DataSet(data.nodes);
+        const edges = new vis.DataSet(data.edges);
+        const network = new vis.Network(container, { nodes, edges }, options);
+        const popup = document.getElementById("popup");
+        const baseSize = {};
+        const baseFont = {};
+        nodes.getIds().forEach(id => {
+          baseSize[id] = network.body.nodes[id].options.size;
+          baseFont[id] = network.body.nodes[id].options.font.size;
+        });
+        // Resize a node and scale its label by the same factor
+        const setSize = (id, size) =>
+          nodes.update({ id, size, font: { size: Math.round(baseFont[id] * size / baseSize[id]) } });
+        let active = null;
+
+        const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+        function shrink() {
+          if (active !== null) setSize(active, baseSize[active]);
+          active = null;
+          popup.classList.remove("open");
+        }
+
+        function select(id) {
+          shrink();
+          const node = nodes.get(id);
+          active = id;
+          setSize(id, baseSize[id] * 2);
+          network.focus(id, { scale: 1.2, offset: { x: -150, y: 0 }, animation: { duration: 700, easingFunction: "easeInOutQuad" } });
+
+          const linked = network.getConnectedNodes(id).map(n => nodes.get(n));
+          popup.innerHTML =
+            '<button aria-label="Close">&times;</button>' +
+            (node.image ? '<img src="' + esc(node.image) + '" alt="' + esc(node.label) + '">' : "") +
+            "<h2>" + esc(node.label) + "</h2>" +
+            '<div class="type">' + esc(node.group || "") + "</div>" +
+            (node.description ? "<p>" + esc(node.description) + "</p>" : "") +
+            (node.url ? '<p><a href="' + esc(node.url) + '" target="_top">' + ({ essay: "Read the essay", author: "Read the bio" }[node.group] || "View the artifact") + " &rarr;</a></p>" : "") +
+            (linked.length ? "<h3>Connected to</h3><ul>" + linked.map(l => "<li>" + (l.url ? '<a href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + "</a>" : esc(l.label)) + "</li>").join("") + "</ul>" : "");
+          popup.querySelector("button").onclick = () => { shrink(); network.fit({ animation: true }); };
+          popup.classList.add("open");
+        }
+
+        network.on("click", params => {
+          if (params.nodes.length) select(params.nodes[0]);
+          else if (active !== null) { shrink(); network.fit({ animation: true }); }
+        });
+
+        // Ambient drift: every so often a random node swells, then settles back,
+        // so images appear to drift in and out of view. Paused while a node is open.
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const swelling = new Set();
+        function swell(id) {
+          const peak = baseSize[id] * (1.6 + Math.random() * 0.6);
+          const duration = 2500 + Math.random() * 2000;
+          const start = performance.now();
+          swelling.add(id);
+          (function frame(now) {
+            const t = Math.min((now - start) / duration, 1);
+            const size = baseSize[id] + (peak - baseSize[id]) * Math.sin(Math.PI * t); // up, then back down
+            if (id !== active) setSize(id, size);
+            if (t < 1 && id !== active) requestAnimationFrame(frame);
+            else { swelling.delete(id); if (id !== active) setSize(id, baseSize[id]); }
+          })(start);
+        }
+        if (!reduceMotion) {
+          setInterval(() => {
+            if (active !== null || document.hidden) return;
+            const ids = nodes.getIds().filter(id => !swelling.has(id));
+            if (ids.length) swell(ids[Math.floor(Math.random() * ids.length)]);
+          }, 1200);
+        }
+        window.addEventListener("resize", () => network.redraw());
       })
       .catch(error => {
         document.getElementById("message").textContent =

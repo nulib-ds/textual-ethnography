@@ -4,36 +4,15 @@ description: This is an idea page for a Canopy IIIF project.
 image: https://iiif.dc.library.northwestern.edu/iiif/3/138a94b0-175a-4152-98c7-df58661ce7d5/950,520,7100,4740/!1200,630/0/default.jpg
 ---
 
-<Container>
-
-<div className="home-wrapper">
-
-<style>{`
-  .texthnography { font-size: 3rem; font-weight: 700; letter-spacing: 0.05em; padding: 2rem 0 1rem; }
-  .texthnography .text   { animation: textOn   12s infinite; }
-  .texthnography .shared { animation: sharedOn 12s infinite; }
-  .texthnography .ethno  { animation: ethnoOn  12s infinite; }
-  .texthnography .graphy { animation: graphyOn 12s infinite; }
-  @keyframes textOn   { 0%, 22% { color: #EC2D01; } 25%, 97% { color: #bbbbbb; } 100% { color: #EC2D01; } }
-  @keyframes sharedOn { 0%, 47% { color: #EC2D01; } 50%, 72% { color: #bbbbbb; } 75%, 100% { color: #EC2D01; } }
-  @keyframes ethnoOn  { 0%, 22% { color: #bbbbbb; } 25%, 47% { color: #EC2D01; } 50%, 72% { color: #bbbbbb; } 75%, 97% { color: #EC2D01; } 100% { color: #bbbbbb; } }
-  @keyframes graphyOn { 0%, 47% { color: #bbbbbb; } 50%, 97% { color: #EC2D01; } 100% { color: #bbbbbb; } }
-  @media (prefers-reduced-motion: reduce) { .texthnography span { animation: none; } }
-`}</style>
-
-<h1 className="texthnography" aria-label="Texthnography"><span aria-hidden="true"><span className="text">T</span><span className="shared">E</span><span className="text">X</span><span className="shared">T</span><span className="ethno">HNO</span><span className="graphy">GRAPHY</span></span></h1>
-
-**Explorations in Comparative and Interdisciplinary Research**
+<div className="home-wrapper" style={{ padding: "0 1rem" }}>
 
    <iframe
-     src="/textual-ethnography/network-viz/network.html"
+     src="network-viz/network.html"
      title="Network of authors, essays, artifacts, and subjects"
      width="100%"
-     height="620"
-     style={{ border: "0" }}
+     height="100%"
+     style={{ border: "0", display: "block", width: "100%", height: "100vh" }}
    ></iframe>
 
 
 </div>
-
-</Container>

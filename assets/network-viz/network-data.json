@@ -5,112 +5,128 @@
       "label": "Jane Smith",
       "group": "author",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mary_Jane_Smith_%281850-1946%29_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Mary_Jane_Smith_%281850-1946%29_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "a2",
       "label": "Jane Goodall",
       "group": "author",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jane_Goodall_HK.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jane_Goodall_HK.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "a3",
       "label": "Boris Karloff",
       "group": "author",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Boris_Karloff.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Boris_Karloff.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "a4",
       "label": "Willard Gibbs",
       "group": "author",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Willard_Gibbs.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Willard_Gibbs.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "a5",
       "label": "Jane Adams",
       "group": "author",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jane_Adams.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Jane_Adams.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "e1",
       "label": "Hands in the Margins",
       "group": "essay",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "e2",
       "label": "Book as Witness",
       "group": "essay",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "e3",
       "label": "Tales from the Crypt",
       "group": "essay",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "e4",
       "label": "Good Geography",
       "group": "essay",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "e5",
       "label": "Waning Principles",
       "group": "essay",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/Locke_Essay_1690.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "r1",
       "label": "Armenian Bible leaf",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_first_Bible_printed_in_the_Armenian_language.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_first_Bible_printed_in_the_Armenian_language.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "r2",
       "label": "Late 16th/early 17th century commonplace book",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flickr_-_Beinecke_Flickr_Laboratory_-_%28Commonplace_Book%29%2C_%28late_17th_Century%29_%2827%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flickr_-_Beinecke_Flickr_Laboratory_-_%28Commonplace_Book%29%2C_%28late_17th_Century%29_%2827%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "r3",
       "label": "Cuneiform Tablets",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Cuneiform_Akkadian_clay_tablet_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/Cuneiform_Akkadian_clay_tablet_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "r4",
       "label": "Aleister Crowley manuscript grimoire",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://iiif.dc.library.northwestern.edu/iiif/3/c748711f-1eba-4d7e-ac9c-91b6e92c072b/full/,3000/0/default.jpg"
+      "image": "https://iiif.dc.library.northwestern.edu/iiif/3/c748711f-1eba-4d7e-ac9c-91b6e92c072b/full/,3000/0/default.jpg",
+      "url": "#"
     },
     {
       "id": "r5",
       "label": "Selection of 2nd wave feminist posters",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Welfare_Conference_Poster_%28New_York_Wages_for_Housework_Committee%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/Welfare_Conference_Poster_%28New_York_Wages_for_Housework_Committee%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "r6",
       "label": "Selection of 1960s-1980s progressive protest buttons",
       "group": "artifact",
       "shape": "circularImage",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Yippie%21_Button_at_the_Chicago_History_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Yippie%21_Button_at_the_Chicago_History_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "url": "#"
     },
     {
       "id": "s1",
